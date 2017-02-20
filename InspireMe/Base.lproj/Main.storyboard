@@ -1,26 +1,109 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Quotes View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MQuotesViewController" customModule="InspireMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="yuL-BV-5sd">
+                                <rect key="frame" x="149" y="28" width="117" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="2jd-aH-Uvj"/>
+                                    <constraint firstAttribute="width" constant="117" id="jT8-Uo-cEI"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quotecard" translatesAutoresizingMaskIntoConstraints="NO" id="TNh-gN-pDR">
+                                <rect key="frame" x="26.666666666666629" y="99" width="361" height="484"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="484" id="v3O-nm-D5a"/>
+                                    <constraint firstAttribute="width" constant="361" id="xjR-H0-5Cs"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="bMn-ZV-F1N">
+                                <rect key="frame" x="47" y="300" width="321" height="93"/>
+                                <string key="text">If you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long. Just figure out what’s next.</string>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumb_brendon" translatesAutoresizingMaskIntoConstraints="NO" id="Z98-rm-rPx">
+                                <rect key="frame" x="66" y="443" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="AWw-zA-hph"/>
+                                    <constraint firstAttribute="width" constant="80" id="pen-ua-aCG"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steve Jobs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vi-is-AcE">
+                                <rect key="frame" x="157" y="471" width="84" height="23.333333333333314"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIb-Jg-Ocz">
+                                <rect key="frame" x="36" y="603" width="341" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Inspire Me">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="inspireButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iuq-Kx-M5w"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2vi-is-AcE" firstAttribute="leading" secondItem="Z98-rm-rPx" secondAttribute="trailing" constant="11" id="3pD-N8-VVz"/>
+                            <constraint firstItem="yuL-BV-5sd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J6g-3e-aeu"/>
+                            <constraint firstItem="dIb-Jg-Ocz" firstAttribute="top" secondItem="TNh-gN-pDR" secondAttribute="bottom" constant="20" id="KBL-su-czK"/>
+                            <constraint firstItem="Z98-rm-rPx" firstAttribute="leading" secondItem="TNh-gN-pDR" secondAttribute="leading" constant="40" id="N7N-ha-1SG"/>
+                            <constraint firstItem="2vi-is-AcE" firstAttribute="centerY" secondItem="Z98-rm-rPx" secondAttribute="centerY" id="O5v-te-axY"/>
+                            <constraint firstItem="dIb-Jg-Ocz" firstAttribute="leading" secondItem="TNh-gN-pDR" secondAttribute="leading" constant="10" id="VlL-Cd-HrH"/>
+                            <constraint firstItem="Z98-rm-rPx" firstAttribute="bottom" secondItem="TNh-gN-pDR" secondAttribute="bottom" constant="-60" id="WTw-Jt-jbQ"/>
+                            <constraint firstItem="yuL-BV-5sd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="YcW-m1-50v"/>
+                            <constraint firstItem="bMn-ZV-F1N" firstAttribute="leading" secondItem="TNh-gN-pDR" secondAttribute="leading" constant="20" id="dgE-DH-PmA"/>
+                            <constraint firstItem="dIb-Jg-Ocz" firstAttribute="trailing" secondItem="TNh-gN-pDR" secondAttribute="trailing" constant="-10" id="h8j-Si-qq5"/>
+                            <constraint firstItem="TNh-gN-pDR" firstAttribute="top" secondItem="yuL-BV-5sd" secondAttribute="bottom" constant="30" id="lTV-bm-RFD"/>
+                            <constraint firstItem="bMn-ZV-F1N" firstAttribute="centerY" secondItem="TNh-gN-pDR" secondAttribute="centerY" id="lc6-rp-BGd"/>
+                            <constraint firstItem="bMn-ZV-F1N" firstAttribute="trailing" secondItem="TNh-gN-pDR" secondAttribute="trailing" constant="-20" id="uUC-9l-w5m"/>
+                            <constraint firstItem="TNh-gN-pDR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zvQ-qf-zJg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authorImageView" destination="Z98-rm-rPx" id="1Na-AY-Hek"/>
+                        <outlet property="authorLabel" destination="2vi-is-AcE" id="w3n-Y9-ZPT"/>
+                        <outlet property="quoteLabel" destination="bMn-ZV-F1N" id="San-of-QmI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="37.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="117" height="41"/>
+        <image name="quotecard" width="361" height="484"/>
+        <image name="thumb_brendon" width="80" height="80"/>
+    </resources>
 </document>
